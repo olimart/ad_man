@@ -22,7 +22,7 @@ module AdMan
       :size => { :in => 0..(AdMan.max_image_size).kilobytes }
     validates_presence_of :destination_url, :title, :keyword_id, :priority
     validates_uniqueness_of :title
-    validate :image_dimensions, :on => :create
+    #validate :image_dimensions, :on => :create
     after_initialize :init_priority
 
     def self.render_random_ad(keyword_id = nil)
